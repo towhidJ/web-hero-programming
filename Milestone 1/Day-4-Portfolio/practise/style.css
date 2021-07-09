@@ -1,0 +1,36 @@
+.flexible-contrainer{
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.dream-area{
+    flex-direction:row-reverse;
+}
+
+.half-width{
+    width:50%;
+}
+.half-width img{
+    width:80%;
+}
+
+body{
+    
+}
+
+.boxs{
+    width:100%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 10px 15px 30px grey;
+    border-top-left-radius:30px;
+    border-bottom-right-radius: 30px;
+    background-color:aqua;
+}
+
+@media only screen and (max-width: 600px) {
+    .experience-area{
+        flex-wrap: wrap;
+    }
+  }
+
