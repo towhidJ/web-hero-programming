@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Blog </h1>
+    <div id="comment-cont"> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint voluptatum asperiores hic totam odit cupiditate quisquam. Error rem tenetur fuga sapiente est obcaecati optio temporibus quae fugit amet soluta voluptas sunt quod unde accusamus nesciunt molestiae nemo itaque eaque mollitia, beatae repudiandae porro consectetur.</p>
+    <p>At aut maiores aliquid illum accusantium, possimus nostrum repudiandae quia eligendi ipsa. Natus reprehenderit obcaecati voluptatem dignissimos omnis? Aut modi voluptates blanditiis. Assumenda accusamus laboriosam corrupti! Dolorum ab ut cum. Alias aperiam numquam reiciendis voluptate ipsum doloribus earum magnam quam maiores, recusandae illum repellat rem!</p>
+    <p>At magni debitis ea rem consectetur fuga deleniti ipsa voluptas! Perferendis corrupti dolorem, doloremque minus fugit at dolores quidem hic debitis sapiente praesentium dolore obcaecati accusamus iure voluptatibus illo quibusdam et vitae deleniti, aut, facere expedita? Molestiae soluta quis natus voluptate maxime necessitatibus totam iure?</p>
+
+    </div>
+    <textarea id="comment" rows="10" cols="50">
+
+    </textarea>
+    <br/>
+    <button id="commentBtn">Post</button>
+    <br>
+    <input type="text" id="delete-confirm"/>
+    <button id="deleteBtn" disabled>Delete</button>
+</body>
+
+
+
+<script type="text/javascript">
+
+document.getElementById("commentBtn").addEventListener('click',function(){
+    var text = document.getElementById("comment");
+    const newComment = document.createElement('p');
+    newComment.setAttribute('id',"com");
+    newComment.innerHTML = text.value;
+
+    const commentCont = document.getElementById("comment-cont");
+    commentCont.appendChild(newComment);
+    comment.value ="";
+
+})
+
+//delete
+document.getElementById("delete-confirm").addEventListener('focus',function(){
+   
+    var b = document.getElementById("comment-cont");
+    b.style.backgroundColor="yellow";
+     
+})
+
+document.getElementById("delete-confirm").addEventListener('blur',function(){
+   
+   var b = document.getElementById("comment-cont");
+   b.style.backgroundColor="";
+    
+})
+
+document.getElementById("delete-confirm").addEventListener('keyup',function(event){
+   
+   var b = document.getElementById("deleteBtn");
+   if (event.target.value=="delete"){
+       b.removeAttribute("disabled");
+       console.log(event.target.value)
+   }
+   else{
+       b.setAttribute("disabled",true);
+   }
+   console.log(event.target.value)
+   
+   
+    
+})
+
+//delete
+document.getElementById("deleteBtn").addEventListener('click',function(){
+   
+    var p = document.querySelectorAll('#com:last-child');
+    
+    for(let l of p)
+    {
+        l.remove();
+        console.log(l);
+    }
+
+})
+
+</script>
+</html>
