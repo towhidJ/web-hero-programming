@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .img-grid img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .img-grid {
+                display: grid;
+
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 16px;
+            }
+
+            /* .horizontal {
+                grid-area: 1/2/3/4;
+            } */
+
+            @media only screen and (max-width: 768px) {
+                .img-grid {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-gap: 16px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="img-grid">
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="horizontal">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+            <div class="">
+                <img src="../Practise/saifaG/img/slide-3.jpg" alt="" />
+            </div>
+        </div>
+    </body>
+</html>
