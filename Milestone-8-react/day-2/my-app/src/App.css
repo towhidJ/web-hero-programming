@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+.cinema{
+  background:antiquewhite;
+  color:black;
+  font-weight:bold;
+  border-radius:10px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 768px){
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

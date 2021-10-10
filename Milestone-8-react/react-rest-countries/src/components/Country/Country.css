@@ -1,0 +1,12 @@
+.country{
+    border: 2px solid aquamarine;
+    border-radius: 15px;
+    background-color: ghostwhite;
+    margin:10px;
+    padding:5px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.country img{
+    width:200px;
+}
